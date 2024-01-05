@@ -1,0 +1,6 @@
+
+CREATE DATABASE payroll_service;
+SHOW DATABASES;
+USE payroll_service;
+
+Create Table emploee_payroll(id int auto_increment primary Key Not Null, name varchar(50), salary double, start_date date);
