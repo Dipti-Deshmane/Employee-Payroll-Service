@@ -16,7 +16,29 @@ Select salary From payroll_service Where name = 'Dipti Borke';
 SELECT * FROM payroll_service
 WHERE start_date BETWEEN CAST('2020-03-15' AS DATE) AND DATE(NOW());
 
-ALTER TABLE employee_payroll ADD gender CHAR(1) AFTER name;
-UPDATE employee_payroll SET gender = 'F' WHERE name = 'Kirti Borke';
-UPDATE employee_payroll SET gender = 'M' WHERE name = 'Vaibhav Borke';
-UPDATE employee_payroll SET gender = 'F' WHERE name = 'Dipti Borke';
+
+ALTER TABLE payroll_service ADD gender CHAR(1) AFTER name;
+UPDATE payroll_service SET gender = 'F' WHERE name = 'Kirti Borke';
+UPDATE payroll_service SET gender = 'M' WHERE name = 'Vaibhav Borke';
+UPDATE payroll_service SET gender = 'F' WHERE name = 'Dipti Borke';
+
+
+
+
+
+INSERT INTO payroll_service (name ,gender ,salary, start_date) VALUES 
+    ('Kirti Borke','F', 75000.00, '2018-12-25'),
+('Vaibhav Borke','M', 20400.00 , '2022-05-02'),
+('Dipti Borke','F', 45000.00 , '2020-03-14');
+
+SELECT SUM(salary) FROM payroll_service
+WHERE gender = 'F' GROUP BY gender;
+
+SELECT AVG(salary) FROM payroll_service
+WHERE gender = 'F' GROUP BY gender;
+
+SELECT MIN(salary) FROM payroll_service
+WHERE gender = 'M' GROUP BY gender;
+
+SELECT MAX(salary) FROM payroll_service
+WHERE gender = 'F' GROUP BY gender;
