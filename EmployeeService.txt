@@ -48,3 +48,9 @@ ALTER TABLE payroll_service ADD phone_number VARCHAR(15) AFTER name;
 ALTER TABLE payroll_service ADD address VARCHAR(200) AFTER phone_number;
 ALTER TABLE payroll_service ADD department VARCHAR(150) NOT NULL AFTER address;
 ALTER TABLE payroll_service ALTER address SET DEFAULT NULL;
+
+ALTER TABLE payroll_service RENAME COLUMN salary TO basic_pay;
+ALTER TABLE payroll_service ADD deductions Double NOT NULL AFTER basic_pay;
+ALTER TABLE payroll_service ADD taxable_pay Double NOT NULL AFTER deductions;
+ALTER TABLE payroll_service ADD income_tax Double NOT NULL AFTER taxable_pay;
+ALTER TABLE payroll_service ADD net_pay Double NOT NULL AFTER income_tax;
