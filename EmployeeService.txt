@@ -3,4 +3,9 @@ CREATE DATABASE payroll_service;
 SHOW DATABASES;
 USE payroll_service;
 
-Create Table emploee_payroll(id int auto_increment primary Key Not Null, name varchar(50), salary double, start_date date);
+Create Table payroll_service(id int auto_increment primary Key Not Null, name varchar(50), salary double, start_date date);
+
+INSERT INTO payroll_service(name, salary, start_date) VALUES
+('Kirti Borke', 75000.00, '2018-12-25'),
+('Vaibhav Borke', 20400.00 , '2022-05-02'),
+('Dipti Borke', 45000.00 , '2020-03-14');
