@@ -54,3 +54,7 @@ ALTER TABLE payroll_service ADD deductions Double NOT NULL AFTER basic_pay;
 ALTER TABLE payroll_service ADD taxable_pay Double NOT NULL AFTER deductions;
 ALTER TABLE payroll_service ADD income_tax Double NOT NULL AFTER taxable_pay;
 ALTER TABLE payroll_service ADD net_pay Double NOT NULL AFTER income_tax;
+
+UPDATE payroll_service set department = 'Sales' where name = 'Kirti Borke';
+INSERT INTO payroll_service (name, department, gender, basic_pay, deductions, taxable_pay,  income_tax, net_pay, start_date) VALUES
+('Kirti Borke', 'Marketing', 'F', 500000.00, '100000.00', '300000.00', '15000.00', '200000.00','2022-05-01');
