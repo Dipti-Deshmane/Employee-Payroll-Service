@@ -9,3 +9,9 @@ INSERT INTO payroll_service(name, salary, start_date) VALUES
 ('Kirti Borke', 75000.00, '2018-12-25'),
 ('Vaibhav Borke', 20400.00 , '2022-05-02'),
 ('Dipti Borke', 45000.00 , '2020-03-14');
+
+Select * From payroll_service;
+
+Select salary From payroll_service Where name = 'Dipti Borke';
+SELECT * FROM payroll_service
+WHERE start_date BETWEEN CAST('2020-03-15' AS DATE) AND DATE(NOW());
