@@ -11,7 +11,3 @@ INSERT INTO payroll_service(name, salary, start_date) VALUES
 ('Dipti Borke', 45000.00 , '2020-03-14');
 
 Select * From payroll_service;
-
-Select salary From payroll_service Where name = 'Dipti Borke';
-SELECT * FROM payroll_service
-WHERE start_date BETWEEN CAST('2020-03-15' AS DATE) AND DATE(NOW());
