@@ -42,3 +42,9 @@ WHERE gender = 'M' GROUP BY gender;
 
 SELECT MAX(salary) FROM payroll_service
 WHERE gender = 'F' GROUP BY gender;
+
+
+ALTER TABLE payroll_service ADD phone_number VARCHAR(15) AFTER name;
+ALTER TABLE payroll_service ADD address VARCHAR(200) AFTER phone_number;
+ALTER TABLE payroll_service ADD department VARCHAR(150) NOT NULL AFTER address;
+ALTER TABLE payroll_service ALTER address SET DEFAULT NULL;
